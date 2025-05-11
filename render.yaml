@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: talkweet-back
+    env: java
+    plan: free
+    buildCommand: ""
+    startCommand: java -jar talkweet_server-0.0.1-SNAPSHOT.jar

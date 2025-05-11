@@ -1,11 +1,11 @@
+# Dockerfile
 FROM eclipse-temurin:17-jdk-alpine
 
-# copie du JAR
-COPY talkweet_server-0.0.1-SNAPSHOT.jar /app/app.jar
-
 WORKDIR /app
+# On copie ton JAR en le renommant app.jar
+COPY talkweet_server-0.0.1-SNAPSHOT.jar ./app.jar
 
-# expose le port sur lequel Spring Boot écoute
 EXPOSE 8080
 
-ENTRYPOINT ["java","-jar","/app/app.jar"]
+# On lance le bon nom de fichier
+ENTRYPOINT ["java", "-jar", "app.jar"]
